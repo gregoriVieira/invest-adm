@@ -1,0 +1,79 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$mb-primary: (
+    50 : #f5f6ed,
+    100 : #a8c5cc,
+    200 : #98bac3,
+    300 : #88b0b9,
+    400 : #78a5b0,
+    500 : #689aa7,
+    600 : #689aa7,
+    700 : #5a8e9b,
+    800 : #517f8a,
+    900 : #36abc9,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$mb-accent: (
+    50 : #c7cfd4,
+    100 : #9daab2,
+    200 : #7d8e9a,
+    300 : #5b6a74,
+    400 : #4d5b63,
+    500 : #404b52,
+    600 : #333b41,
+    700 : #252c30,
+    800 : #181c1e,
+    900 : #0a0c0d,
+    A100 : #b1cee0,
+    A200 : #699fc2,
+    A400 : #48687d,
+    A700 : #475965,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$candy-app-primary: mat-palette($mb-primary);
+$candy-app-accent: mat-palette($mb-accent, 500);
+
+// The warn palette is optional (defaults to red).
+$candy-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($candy-app-theme);
